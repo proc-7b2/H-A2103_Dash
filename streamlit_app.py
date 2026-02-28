@@ -97,59 +97,6 @@ if st.session_state["authentication_status"]:
         st.session_state.queue = []
         st.rerun()
 
-
-    st.markdown("""
-    <style>
-    /* --- 1. GLOBAL BUTTON TEXT COLOR --- */
-    /* This changes the text color for ALL buttons */
-    div.stButton > button p {
-        color: white;
-        font-weight: 600;
-    }
-
-    /* --- 2. LOGOUT BUTTON STYLING (RED) --- */
-    /* Target buttons in the sidebar that contain the word "Logout" */
-    section[data-testid="stSidebar"] .stButton button:has(div p:contains("Logout")) {
-        background-color: #3e1212; /* Dark red base */
-        color: #ff7b72;           /* Light red text */
-        border: 1px solid #6e2e2e;
-    }
-
-    /* HOVER STATE for Logout */
-    section[data-testid="stSidebar"] .stButton button:has(div p:contains("Logout")):hover {
-        background-color: #ff4b4b !important; /* Bright red on hover */
-        color: white !important;             /* White text on hover */
-        border-color: #ff3333 !important;
-    }
-
-    /* --- 3. PRIMARY ACTION BUTTONS (The Red/Pink ones) --- */
-    /* Target buttons you've set to type="primary" */
-    div.stButton > button[kind="primary"] {
-        background-color: #ff5f5f; 
-        color: white;
-        border: none;
-    }
-
-    /* HOVER STATE for Primary */
-    div.stButton > button[kind="primary"]:hover {
-        background-color: #ff3333; /* Darker/Brighter red */
-        color: #ffffff;
-        box-shadow: 0 4px 15px rgba(255, 75, 75, 0.4); /* Adds a glow effect */
-    }
-
-    /* --- 4. SECONDARY BUTTONS (Reset App State) --- */
-    div.stButton > button[kind="secondary"] {
-        background-color: #161b22;
-        border: 1px solid #30363d;
-    }
-
-    div.stButton > button[kind="secondary"]:hover {
-        border-color: #58a6ff; /* Blue border on hover */
-        color: #58a6ff !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
     
     st.sidebar.markdown("<br>" * 10, unsafe_allow_html=True)
     st.sidebar.markdown("---")
